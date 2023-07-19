@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend trial - Bruno Gomes</title>
+    <link rel="stylesheet" href="public/style/styles.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1>Bike4You</h1>
+        <nav class="menu">
+            <a href="#section1" class="nav-home">Home</a>
+            <a href="#highlight_cards" class="nav-highlights">Highlights</a>
+            <a href="#form" class="nav-contact">Contact</a>
+            <a href="#maps" class="nav-map">Location</a>
+        </nav>
+
+
+
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="menu" id="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section slider parallax"></section>
+
+    <section id="highlight_cards" class="section">
+        <div class="card-container">
+            <div class="card" style="background-image: url('public/media/img/bike-accessories.jpg');">
+                <div class="card-content">
+                    <h2 class="card-title">ACCESSORIES</h2>
+                    <p class="card-text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+                        unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="card" style="background-image: url('public/media/img/bike-clothes.png');">
+                <div class="card-content">
+                    <h2 class="card-title">CLOTHES</h2>
+                    <p class="card-text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+                        unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="card" style="background-image: url('public/media/img/bike-parts.jpg');">
+                <div class="card-content">
+                    <h2 class="card-title">PARTS</h2>
+                    <p class="card-text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+                        unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section banner parallax"></section>
+
+    <section id="form" class="section">
+        <h1 class="form-title">CONTACT US</h1>
+        
+        
+        <form id="contactForm">
+            <input type="email" id="email" name="email" placeholder="Email *" required>
+            <input type="text" id="name" name="name" placeholder="Name *" disabled required>
+            <input type="text" id="subject" name="subject" placeholder="Subject" disabled>
+
+            <textarea id="message" name="message" rows="4" cols="50" placeholder="Message *" required disabled></textarea>
+
+            <div class="form-required-text">
+                <span>* Required fields</span>
+            </div>
+            
+            <button type="submit" value="Submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="maps" class="section">        
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497354.2412249324!2d-0.2416811900559813!3d51.52877184028281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cbf5baa6c87%3A0xc5e9d21b6ccee455!2sLondon%2C%20UK!5e0!3m2!1sen!2s!4v1621295140919!5m2!1sen!2s"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+        ></iframe>
+    </section>
+
+    <!-- <footer>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>Column 1</h3>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    <li><a href="#">Link 5</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Column 2</h3>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    <li><a href="#">Link 5</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Column 3</h3>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    <li><a href="#">Link 5</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer> -->
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>Column 1</h3>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Column 2</h3>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Column 3</h3>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="public/media/img/facebook.svg" alt="facebook-icon"/></a>
+                    <a href="#"><img src="public/media/img/twitter.svg" alt="twitter-icon"/></a>
+                    <a href="#"><img src="public/media/img/instagram.svg" alt="instagram-icon"/></a>
+                    <a href="#"><img src="public/media/img/linkedin.svg" alt="linkedin-icon"/></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a id="button_back_to_top" onclick="scrollToTop()"></a>
+
+    <script src="public/script/scripts.js"></script>
+</body>
+
+</html>

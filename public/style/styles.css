@@ -1,0 +1,326 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F1F1F1;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: transform 0.3s ease;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+  .burger-menu {
+    display: block;
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #444;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+  .menu ul {
+    flex-direction: column;
+  }
+  .menu li {
+    margin-bottom: 10px;
+  }
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .menu.active {
+    display: flex;
+  }
+  .burger-menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .burger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .burger-menu.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+section {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  text-align: center;
+}
+section.parallax {
+  background-position-y: 0px;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+section.slider {
+  background-image: url("../media/img/bike_slider.jpeg");
+  max-height: 50vh;
+  background-position-y: 0px;
+}
+section.banner {
+  background-image: url("../media/img/bike_banner.jpeg");
+  max-height: 30vh;
+}
+section#highlight_cards {
+  margin-top: 30px;
+}
+section#highlight_cards .card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+section#highlight_cards .card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  margin: 20px;
+}
+section#highlight_cards .card:hover .card-content {
+  top: 0;
+  transition: 0.5s all;
+  padding-top: 30px;
+}
+section#highlight_cards .card:hover .card-content .card-text {
+  display: block;
+}
+section#highlight_cards .card .card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  padding: 10px;
+  transition: all 0.5s;
+}
+section#highlight_cards .card .card-content .card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+section#highlight_cards .card .card-content .card-text {
+  font-size: 14px;
+  margin: 0;
+  display: none;
+  margin-top: 25px;
+}
+section#form {
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFF;
+  padding-bottom: 90px;
+}
+section#form .form-title {
+  color: #636363;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+section#form form {
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ccc;
+}
+section#form form input, section#form form textarea {
+  display: block;
+  margin-bottom: 25px;
+  width: 95%;
+  height: 40px;
+  border-radius: 5px;
+  border: solid 1px;
+  padding: 10px;
+}
+section#form form button {
+  background-color: #2ca9bc;
+  color: #FFF;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  transition: all ease 0.3s;
+}
+section#form form button:after {
+  content: "";
+  background: url("../media/img/send.svg");
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+section#form form button:hover {
+  background-color: #0a879a;
+}
+section#form form input[type=email]:invalid {
+  border: 1px solid #f00;
+}
+section#form form input[type=email]:valid {
+  border: 1px solid #ccc;
+}
+section#form form .form-required-text {
+  position: relative;
+  text-align: left;
+  margin-top: -20px;
+  margin-bottom: 25px;
+}
+section#form form .form-required-text span {
+  font-size: 0.8em;
+  color: #f73434;
+}
+section#maps {
+  width: 100%;
+  padding: 0;
+}
+section#maps iframe {
+  width: 100%;
+}
+
+#button_back_to_top {
+  display: inline-block;
+  text-align: center;
+  border-radius: 100px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button_back_to_top::after {
+  content: "";
+  background: url("../media/img/top-arrow.svg") no-repeat;
+  width: 80px;
+  height: 80px;
+  display: block;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #FFF;
+}
+#button_back_to_top:hover {
+  cursor: pointer;
+  background-color: #dad8d8;
+  border-radius: 100px;
+}
+#button_back_to_top:active {
+  background-color: #555;
+}
+#button_back_to_top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Basic Styles for Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  max-width: 250px;
+  padding: 10px;
+}
+
+.footer-column h3 {
+  color: #fff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 5px;
+}
+
+.footer-column a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+/* Social Icons Styles */
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 200px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=styles.css.map */

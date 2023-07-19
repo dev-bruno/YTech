@@ -1,0 +1,80 @@
+&#form {
+    flex-direction: column;
+    align-items: center;
+    background-color: $white-color;
+    padding-bottom: 90px;
+
+    .form-title {
+        color: #636363;
+        text-decoration: none;
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+    form {
+        padding: 30px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #ccc;
+
+        input, textarea {
+            display: block;
+            margin-bottom: 25px;
+            width: 95%;
+            height: 40px;
+            border-radius: 5px;
+            border: solid 1px;
+            padding: 10px;
+        }
+
+        button {
+            background-color: #2ca9bc;
+            color: $white-color;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 50%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1em;
+            transition: all ease .3s;
+
+            &:after {
+                content: '';
+                background: url("../media/img/send.svg");
+                width: 30px;
+                height: 30px;
+                margin-left: 10px;
+            }
+
+            &:hover {
+                background-color: #0a879a;
+            }
+        }
+        
+
+        
+        input[type="email"]:invalid {
+            border: 1px solid #f00;
+        }
+        
+        input[type="email"]:valid {
+            border: 1px solid #ccc;
+        }
+
+        .form-required-text {
+            position: relative;
+            text-align: left;
+            margin-top: -20px;
+            margin-bottom: 25px;
+
+            span {
+                font-size: .8em;
+                color: #f73434;
+            }
+        }
+    }   
+}

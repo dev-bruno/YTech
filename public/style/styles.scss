@@ -1,0 +1,94 @@
+@import '_palette';
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: $background-color;
+}
+
+@import '_header';
+
+section {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    text-align: center;
+
+    &.parallax {
+        background-position-y: 0px;
+        height: 100vh;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    &.slider {
+        background-image: url('../media/img/bike_slider.jpeg');
+        max-height: 50vh;
+        background-position-y: 0px;
+    }
+
+    &.banner {
+        background-image: url('../media/img/bike_banner.jpeg');
+        max-height: 30vh;
+    }
+
+    @import '_highlights';
+    @import '_contact-form';
+    @import '_google-map';
+   
+    &#maps {        
+        width: 100%;
+        padding: 0;
+
+        iframe {
+            width: 100%;
+        }
+    }
+}
+
+#button_back_to_top {
+    display: inline-block;
+    text-align: center;
+    border-radius: 100px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+
+    &::after {
+        content: "";
+        background: url("../media/img/top-arrow.svg") no-repeat;
+        width: 80px;
+        height: 80px;
+        display: block;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 2em;
+        line-height: 50px;
+        color: $white-color;
+    }
+        
+    &:hover {
+        cursor: pointer;
+        background-color: #dad8d8;
+        border-radius: 100px;
+    }
+
+    &:active {
+        background-color: #555;    
+    }
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@import '_footer';

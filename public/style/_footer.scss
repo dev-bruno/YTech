@@ -1,51 +1,7 @@
-// footer {
-//     background-color: #333;
-//     color: #fff;
-//     padding: 20px;
-//     text-align: center;
-
-//     .footer-columns {
-//         display: flex;
-//         justify-content: space-around;
-//         flex-wrap: wrap;
-
-//         .footer-column {
-//             flex: 1;
-//             max-width: 250px;
-//             padding: 10px;
-
-//             h3 {
-//                 color: #fff;
-//             }
-            
-//             ul {
-//                 list-style: none;
-//                 padding: 0;
-//             }
-            
-//             li {
-//                 margin-bottom: 5px;
-//             }
-            
-//             a {
-//                 color: #fff;
-//                 text-decoration: none;
-
-//                 &:hover {
-//                     text-decoration: underline;
-//                 }
-//             }
-//         }
-//     }
-// }
-
-
-
-
 /* Basic Styles for Footer */
 footer {
     background-color: #333;
-    color: #fff;
+    color: $white-color;
     padding: 20px;
 }
 
@@ -53,34 +9,34 @@ footer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-}
 
-.footer-column {
-    flex: 1;
-    max-width: 250px;
-    padding: 10px;
-}
+    .footer-column {
+        flex: 1;
+        max-width: 250px;
+        padding: 10px;
 
-.footer-column h3 {
-    color: #fff;
-}
+        h3 {
+            color: $white-color;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        li {
+            margin-bottom: 5px;
+        }
+        
+        a {
+            color: $white-color;
+            text-decoration: none;
 
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-column li {
-    margin-bottom: 5px;
-}
-
-.footer-column a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-column a:hover {
-    text-decoration: underline;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 /* Social Icons Styles */
@@ -88,12 +44,11 @@ footer {
     display: flex;
     justify-content: space-between;
     max-width: 200px;
-    // margin: 0 auto;
-}
 
-.social-icons a {
-    color: #fff;
-    font-size: 20px;
-    margin-right: 10px;
-    text-decoration: none;
+    a {
+        color: $white-color;
+        font-size: 20px;
+        margin-right: 10px;
+        text-decoration: none;
+    }
 }

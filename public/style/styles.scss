@@ -1,7 +1,5 @@
 @import '_palette';
 
-
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -38,7 +36,6 @@ section {
 
     @import '_highlights';
     @import '_contact-form';
-    @import '_google-map';
    
     &#maps {        
         width: 100%;

@@ -92,14 +92,11 @@ window.addEventListener('scroll', function () {
 });
 
 
+/*---------------------------------------------------------------------------
 
+Burger menu mobile
 
-
-
-
-
-
-
+*/
 function toggleMenu() {
     const menu = document.getElementById('menu');
     const burgerMenu = document.querySelector('.burger-menu');
